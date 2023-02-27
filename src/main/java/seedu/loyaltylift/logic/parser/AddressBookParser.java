@@ -13,9 +13,9 @@ import seedu.loyaltylift.logic.commands.DeleteCommand;
 import seedu.loyaltylift.logic.commands.EditCommand;
 import seedu.loyaltylift.logic.commands.ExitCommand;
 import seedu.loyaltylift.logic.commands.FindCommand;
-import seedu.loyaltylift.logic.commands.RemarkCommand;
 import seedu.loyaltylift.logic.commands.HelpCommand;
 import seedu.loyaltylift.logic.commands.ListCommand;
+import seedu.loyaltylift.logic.commands.RemarkCommand;
 import seedu.loyaltylift.logic.parser.exceptions.ParseException;
 
 /**

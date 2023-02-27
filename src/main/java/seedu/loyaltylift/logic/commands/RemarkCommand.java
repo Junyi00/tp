@@ -3,14 +3,14 @@ package seedu.loyaltylift.logic.commands;
 import static seedu.loyaltylift.commons.util.CollectionUtil.requireAllNonNull;
 import static seedu.loyaltylift.model.Model.PREDICATE_SHOW_ALL_PERSONS;
 
+import java.util.List;
+
 import seedu.loyaltylift.commons.core.Messages;
 import seedu.loyaltylift.commons.core.index.Index;
 import seedu.loyaltylift.logic.commands.exceptions.CommandException;
 import seedu.loyaltylift.model.Model;
 import seedu.loyaltylift.model.person.Person;
 import seedu.loyaltylift.model.person.Remark;
-
-import java.util.List;
 
 /**
  * Changes the remark of an existing person in the address book.
