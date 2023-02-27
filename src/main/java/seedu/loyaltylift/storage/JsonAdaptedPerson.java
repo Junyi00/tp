@@ -15,6 +15,7 @@ import seedu.loyaltylift.model.person.Email;
 import seedu.loyaltylift.model.person.Name;
 import seedu.loyaltylift.model.person.Person;
 import seedu.loyaltylift.model.person.Phone;
+import seedu.loyaltylift.model.person.Remark;
 import seedu.loyaltylift.model.tag.Tag;
 
 /**
@@ -102,8 +103,10 @@ class JsonAdaptedPerson {
         }
         final Address modelAddress = new Address(address);
 
+        final Remark modelRemark = new Remark(""); // does not store remarks yet
+
         final Set<Tag> modelTags = new HashSet<>(personTags);
-        return new Person(modelName, modelPhone, modelEmail, modelAddress, modelTags);
+        return new Person(modelName, modelPhone, modelEmail, modelAddress, modelRemark, modelTags);
     }
 
 }
