@@ -450,10 +450,10 @@ listc [s/{name|points}] [f/{marked|ind|ent}]
 
 * Lists customers with the specified sort and filter option.
 
-| Prefix  | Parameter | Optional | Description                              |
-|---------|-----------|:--------:|------------------------------------------|
-| `s/`    | Sort      | ✅       | `name` - Sort by name<br>`points` - Sort by points<br>By default, customers are sorted by name |
-| `f/`    | Filter    | ✅       | `marked` - Show only marked customers<br>`ind` - Show only individuals<br>`ent` - Show only enterprises<br>By default, all customers are shown |
+| Prefix | Parameter | Optional | Description                                                                                                                                        |
+|--------|-----------|:--------:|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| `s/`   | Sort      |    ✅     | `name` - Sort by name<br>`points` - Sort by points<br>By default, customers are sorted by name                                                     |
+| `f/`   | Filter    |    ✅     | `marked` - Show only bookmarked customers<br>`ind` - Show only individuals<br>`ent` - Show only enterprises<br>By default, all customers are shown |
 
 <div markdown="block" class="alert alert-secondary">
 
@@ -466,7 +466,7 @@ listc [s/{name|points}] [f/{marked|ind|ent}]
   Lists all customers sorted by points
 
 * `listc s/points f/marked`<br>
-  Lists marked customers sorted by points
+  Lists all bookmarked customers sorted by points
 
 </div>
 
