@@ -59,7 +59,7 @@ Here's a quick guide to what they all mean:
    A similar GUI, as seen below, should appear in a few seconds. Note how the app contains some sample data.<br>
    ![Ui](images/FreshUi.png)
 
-5. Type the command in the command box (which says 'Enter command here...') and press Enter to execute it. e.g. typing `help` and pressing Enter will open the help window.<br>
+5. Type the command in the command box (which says `Enter command here...`) and press Enter to execute it. e.g. typing `help` and pressing Enter will open the help window.<br>
    Some example commands you can try:
 
    * `listc` : Lists all customers.
@@ -210,7 +210,7 @@ In LoyaltyLift, an order can have the following status.
 <div markdown="block" class="alert alert-info">
 **:information_source: Notes about the order status:**<br>
 
-LoyaltyLift assumes that your order will follow a process similar to the order of status stated above (excluding 'cancelled').
+LoyaltyLift assumes that your order will follow a process similar to the order of status stated above (excluding `cancelled`).
 </div>
 
 Before we start, head over to [_Add your first customer and order_](#add-your-first-customer-and-order) to include _Lyndon Edwards_ and the _Banana Cake_ order.
@@ -223,14 +223,14 @@ Let's look at our current list of orders, which should only consist of the order
 
     listo
 
-Notice that the order's status is now 'Pending'.
+Notice that the order's status is now `Pending`.
 The [`advo`](#advancing-an-order-status-advo) command will come in handy to advance an order's status, which takes the order index as its only parameter.
 
     advo 1
 
 ![result after advancing order status](images/advanceOrderResult.png)
 
-Now, the status of the order should be 'Paid'. Doing this multiple times will eventually update the order's status to 'Completed'.
+Now, the status of the order should be `Paid`. Doing this multiple times will eventually update the order's status to `Completed`.
 Afterwards, further attempts to advance the order status will return an error!
 
 #### Reverting an order's status
@@ -240,8 +240,8 @@ To revert an order's status, the [`revo`](#reverting-an-order-status-revo) comma
 
     revo 1
 
-Now, the status of the order should be 'Pending'. 
-As expected, trying to revert the status when it is already 'Pending', will be met with an error!
+Now, the status of the order should be `Pending`. 
+As expected, trying to revert the status when it is already `Pending`, will be met with an error!
 
 #### Cancelling an order
 {: .no_toc}
@@ -252,7 +252,7 @@ An order can be cancelled at any stage of the order. This can be performed with 
 
 ![result after cancelling order](images/cancelOrderResult.png)
 
-Looking at the order status, it is now reflected as 'Cancelled'. Once an order is cancelled, its status can no longer be advanced.
+Looking at the order status, it is now reflected as `Cancelled`. Once an order is cancelled, its status can no longer be advanced.
 
 <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
 If you accidentally cancel an order, you can still revert its status!
@@ -420,7 +420,7 @@ addc n/NAME p/PHONE e/EMAIL a/ADDRESS [ct/{ind|ent}]
 | `p/`    | Phone         |          | A sequence of numbers, at least 3 digits |
 | `e/`    | Email         |          | Of the format `local-part@domain`        |
 | `a/`    | Address       |          | Any value                                |
-| `ct/`   | Customer Type | ✅       | `ind` - Individual<br>`ent` - Enterprise<br>Customers are 'Individuals' by default |
+| `ct/`   | Customer Type | ✅       | `ind` - Individual<br>`ent` - Enterprise<br>Customers are `Individuals` by default |
 
 
 <div markdown="block" class="alert alert-secondary">
@@ -428,13 +428,13 @@ addc n/NAME p/PHONE e/EMAIL a/ADDRESS [ct/{ind|ent}]
 **:keyboard: Examples:**<br>
 
 * `addc ct/ind n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01`<br>
-  Adds an individual customer named "John Doe"
+  Adds an individual customer named `John Doe`
 
 * `addc ct/ent n/The Potato Farm e/thepotatofarm@example.com a/South street, block 983, #02-01 p/1234567`<br>
-  Adds an enterprise customer named "The Potato Farm"
+  Adds an enterprise customer named `The Potato Farm`
 
 * `addc n/Mary Jane p/93130151 e/maryjane@example.com a/Mary Lamb Street, block 23, #01-12`<br>
-  Adds an individual customer named "Mary Jane"
+  Adds an individual customer named `Mary Jane`
 
 </div>
 
@@ -665,13 +665,13 @@ You can remove a customer's note by setting an empty note.
 **:keyboard: Examples:**<br>
 
 * `listc` followed by `setnotec 2 nt/Very friendly!`<br>
-  Sets the 2nd customer's note as "Very friendly!".
+  Sets the 2nd customer's note as `Very friendly!`.
 
 * `listc` followed by `setnotec 2 nt/`<br>
   Removes the 2nd customer's note.
 
 * `findc Betsy` followed by `setnotec 1 nt/Vegetarian`<br>
-  Sets the 1st customer's note as "Vegetarian" in the results of the `findc` command.
+  Sets the 1st customer's note as `Vegetarian` in the results of the `findc` command.
   ![result for 'setnotec 1 nt/Vegetarian'](images/setnotecBetsyResult.png)
 
 </div>
@@ -697,10 +697,10 @@ appendnotec CINDEX nt/NOTE
 **:keyboard: Examples:**<br>
 
 * `listc` followed by `appendnotec 2 nt/Very friendly!`<br>
-  Adds "Very friendly!" to the 2nd customer's existing note.
+  Adds `Very friendly!` to the 2nd customer's existing note.
 
 * `findc Betsy` followed by `appendnotec 1 nt/Vegetarian`<br>
-  Adds "Vegetarian" to the note of the 1st customer in the results of the `findc` command.
+  Adds `Vegetarian` to the note of the 1st customer in the results of the `findc` command.
 
 </div>
 
@@ -817,10 +817,10 @@ addo CINDEX n/NAME [q/QUANTITY] [a/ADDRESS]
 **:keyboard: Examples:**<br>
 
 * `addo 1 n/Banana Cake 1 q/2 a/Changi Airport`<br>
-  Adds the order, 2 x Banana cakes to the list, tags it to customer at index 1, and status is "pending", address is "Changi Airport".
+  Adds the order, 2 x Banana cakes to the list, tags it to customer at index 1, and status is `pending`, address is `Changi Airport`.
 
 * `addo 4 n/Strawberry ice cream`<br>
-  Adds the order 1 x Strawberry ice cream, tags it to customer 4, and sets status to "pending", address is the customer's address.
+  Adds the order 1 x Strawberry ice cream, tags it to customer 4, and sets status to `pending`, address is the customer's address.
 
 </div>
 
@@ -964,7 +964,7 @@ advo OINDEX
 ```
 
 * Advances the order at the specified `OINDEX`.
-* An order's status will be advanced in the following sequence: "Pending", "Paid", "Shipped", "Completed".
+* An order's status will be advanced in the following sequence: `Pending`, `Paid`, `Shipped`, `Completed`.
 
 
 <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
@@ -993,15 +993,15 @@ revo OINDEX
 ```
 
 * Edits the order at the specified `OINDEX`.
-* An order's status will be reverted in the following sequence: "Completed", "Shipped", "Paid", "Pending".
+* An order's status will be reverted in the following sequence: `Completed`, `Shipped`, `Paid`, `Pending`.
 
 <div markdown="block" class="alert alert-primary">
 
 :bulb: **Tip:**<br>
 
-* If the order is "Pending", the status cannot be reverted further.
+* If the order is `Pending`, the status cannot be reverted further.
 
-* If the order is "Cancelled", `revo` will revert the order to its previous status prior to cancellation.
+* If the order is `Cancelled`, `revo` will revert the order to its previous status prior to cancellation.
 
 </div>
 
@@ -1031,7 +1031,7 @@ cancelo OINDEX
 **:keyboard: Examples:**<br>
 
 * `cancelo 1`<br>
-  Changes the status of the 1st order to "Cancelled".
+  Changes the status of the 1st order to `Cancelled`.
 
 </div>
 
@@ -1087,13 +1087,13 @@ You can remove an order's note by setting an empty note.
 **:keyboard: Examples:**<br>
 
 * `listo` followed by `setnoteo 2 nt/Keep cool`<br>
-  Sets the 2nd order's note as "Keep cool".
+  Sets the 2nd order's note as `Keep cool`.
 
 * `listo` followed by `setnoteo 2 nt/`<br>
   Removes the 2nd order's note.
 
 * `findo Brownies` followed by `setnoteo 1 nt/Vegan-friendly`<br>
-  Sets the 1st order's note as "Vegan-friendly" in the results of the `findo` command.
+  Sets the 1st order's note as `Vegan-friendly` in the results of the `findo` command.
 
 </div>
 
@@ -1118,10 +1118,10 @@ appendnoteo OINDEX nt/NOTE
 **:keyboard: Examples:**<br>
 
 * `listo` followed by `appendnoteo 2 nt/Keep cool`<br>
-  Adds "Keep cool" to the 2nd order's existing note.
+  Adds `Keep cool` to the 2nd order's existing note.
 
 * `findo Brownies` followed by `appendnoteo 1 nt/Vegan-friendly`<br>
-  Adds "Vegan-friendly" to the note of the 1st order in the results of the `findo` command.
+  Adds `Vegan-friendly` to the note of the 1st order in the results of the `findo` command.
 
 </div>
 
@@ -1182,8 +1182,8 @@ Customer and order data are saved in the hard disk automatically after any comma
 ### Customers
 {: .no_toc}
 
-**Q**: My customer's name includes special characters such as 'Jôse'; how can I add this customer into LoyaltyLift? <br />
-**A**: Currently, LoyaltyLift cannot store a customer’s name with special characters. However, one workaround is to add the customer by replacing the special character with a close equivalent, such as 'Jose', and use the `setnotec` command to type his actual name, such as `setnotec 1 nt/Jôse`.
+**Q**: My customer's name includes special characters such as `Jôse`; how can I add this customer into LoyaltyLift? <br />
+**A**: Currently, LoyaltyLift cannot store a customer’s name with special characters. However, one workaround is to add the customer by replacing the special character with a close equivalent, such as `Jose`, and use the `setnotec` command to type his actual name, such as `setnotec 1 nt/Jôse`.
 
 **Q**: How do I view a customer's order history in LoyaltyLift? <br />
 **A**: The order history of a customer is available when you view the customer's information in the information panel. To do so, you can first use `findc` command to locate the customer, then `viewc` command to display the customer in the information panel. The order history is found under the **History** section.
