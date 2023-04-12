@@ -43,6 +43,8 @@ Here's a quick guide to what they all mean:
 
 --------------------------------------------------------------------------------------------------------------------
 
+<div style="page-break-after: always;"></div>
+
 ## Quick start
 
 1. Ensure your computer has Java `11` or above installed.
@@ -142,7 +144,7 @@ If you have not done so, use the `clear` command to remove the sample data!
 Adding your first customer is effortless on LoyaltyLift using [`addc`](#adding-a-customer--addc). 
 Enter the following command to insert a new customer _Lyndon Edwards_ and some basic contact information.
 
-    addc n/Lyndon Edwards p/93015612 e/lyndon@example.com a/Loyalty Street 103, block 122, #01-20
+    addc n/Lyndon Edwards p/93015612 e/lyndon@example.com a/Loyalty Street 103, block 122
 
 The application should already have your customer displayed by this step.
 Nonetheless, you can always type the following commands to list all customers and view the first customer in LoyaltyLift, corresponding to _Lyndon Edwards_.
@@ -426,13 +428,13 @@ addc n/NAME p/PHONE e/EMAIL a/ADDRESS [ct/{ind|ent}]
 **:keyboard: Examples:**<br>
 
 * `addc ct/ind n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01`<br>
-  Add an individual customer named "John Doe"
+  Adds an individual customer named "John Doe"
 
 * `addc ct/ent n/The Potato Farm e/thepotatofarm@example.com a/South street, block 983, #02-01 p/1234567`<br>
-  Add an enterprise customer named "The Potato Farm"
+  Adds an enterprise customer named "The Potato Farm"
 
 * `addc n/Mary Jane p/93130151 e/maryjane@example.com a/Mary Lamb Street, block 23, #01-12`<br>
-  Add an individual customer named "Mary Jane"
+  Adds an individual customer named "Mary Jane"
 
 </div>
 
@@ -871,7 +873,7 @@ findo KEYWORD [MORE_KEYWORDS]
 ```
 
 * The search is case-insensitive. e.g. `chocolate` will match `Chocolate`
-* The order of the keywords does not matter. e.g. `chocolate cake` will match ` cake chocolate`.
+* The order of the keywords does not matter. e.g. `chocolate cake` will match `cake chocolate`.
 * Only the order name is searched.
 * Only full words will be matched e.g. `chocolate` will not match `chocolatey`
 * Orders matching at least one keyword will be returned (i.e. `OR` search).
@@ -1167,7 +1169,7 @@ help
 
 ### Saving the data
 
-Customer and order data are saved in the hard disk automatically after any command that changes the data. There is no need to save manually.
+Customer and order data are saved in the hard disk automatically after any command that changes the data. There is no need for you to save manually.
 
 [🠕 Back To Top](#table-of-contents)
 
