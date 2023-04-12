@@ -406,7 +406,7 @@ Here are some recommended features to explore after this tutorial.
 
 #### Adding a customer : `addc`
 
-Adds a customer to the current list.
+You can include your new customer into LoyaltyLift with `addc`.
 
 **Format**
 
@@ -440,7 +440,7 @@ addc n/NAME p/PHONE e/EMAIL a/ADDRESS [ct/{ind|ent}]
 
 #### Listing customers : `listc`
 
-Shows a list of customers in the **List Panel**.
+Shows a list of customers in the **List Panel**. You can filter and sort the list by specifying additional details.
 
 **Format**
 
@@ -472,7 +472,7 @@ listc [s/{name|points}] [f/{marked|ind|ent}]
 
 #### Locating customers by name : `findc`
 
-Finds customers whose names contain any of the given keywords.
+Helps you find customers whose names contain any of the given keywords.
 
 **Format**
 
@@ -502,7 +502,7 @@ findc KEYWORD [MORE_KEYWORDS]
 
 #### Viewing a customer : `viewc`
 
-Displays a customer's information in the **Information Panel**.
+You can view all information about your customer in a single location; this command displays all about them in the **Information Panel**.
 
 **Format**
 
@@ -528,7 +528,7 @@ You can click on the customer in the table directly for the same effect!
 
 #### Editing a customer : `editc`
 
-Edits an existing customer in LoyaltyLift.
+Customer information can change over time. Thus, `editc` lets you update their personal information, such as their phone number and address.
 
 **Format**
 
@@ -562,7 +562,7 @@ editc CINDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [ct/{ind|env}]
 
 #### Deleting a customer : `deletec`
 
-Deletes a customer from the list.
+If a customer requests that their information be removed from LoyaltyLift, `deletec` helps you remove their profile and orders. 
 
 **Format**
 
@@ -796,7 +796,7 @@ Addition will also result in an addition of cumulative points, while subtraction
 
 #### Adding an order : `addo`
 
-Adds an order for a customer to the current order list.
+When your customer sends you an order request, you can include the order and its information with `addo`. 
 
 **Format**
 
@@ -826,7 +826,7 @@ addo CINDEX n/NAME [q/QUANTITY] [a/ADDRESS]
 
 #### Listing all orders : `listo`
 
-Shows a list of orders in the **List Panel**.
+Shows a list of orders in the **List Panel**. You can filter and sort this list by specifying more details.
 
 **Format**
 
@@ -864,7 +864,7 @@ Currently, you are unable to add the same order name and quantity for the same c
 
 #### Locating orders by name : `findo`
 
-Find orders whose names contain any of the given keywords.
+Helps you find orders whose names contain any of the given keywords.
 
 **Format**
 
@@ -895,7 +895,7 @@ findo KEYWORD [MORE_KEYWORDS]
 
 #### Viewing an order : `viewo`
 
-Displays an order's information in the **Information Panel**.
+You can view all information about your order in a single location; `viewo` displays all about an order in the **Information Panel**.
 
 **Format**
 
@@ -923,7 +923,7 @@ You can click on the order in the table directly for the same effect!
 
 #### Editing an order : `edito`
 
-Edits an existing order in LoyaltyLift.
+As your customer may request changes in the order, such as the address, you can update this information with `edito`.
 
 **Format**
 
@@ -1037,7 +1037,7 @@ cancelo OINDEX
 
 #### Deleting an order : `deleteo`
 
-Deletes the specified order from LoyaltyLift.
+If you need to remove an order from LoyaltyLift, you can do so with `deleteo`.
 
 **Format**
 
@@ -1137,7 +1137,7 @@ appendnoteo OINDEX nt/NOTE
 
 #### Clearing all entries : `clear`
 
-Clears all customers and orders from LoyaltyLift.
+Clears all your customers and orders from LoyaltyLift.
 
 **Format**
 
