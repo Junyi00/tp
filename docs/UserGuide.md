@@ -1228,7 +1228,7 @@ Customer and order data are saved in the hard disk automatically after any comma
 |                                                                   Action | Format, Examples                                                                                                                                                |
 |-------------------------------------------------------------------------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                             [**Add Customer**](#adding-a-customer--addc) | <code>addc [ct/{ind&#124;ent}] n/NAME p/PHONE e/EMAIL a/ADDRESS</code> <br> e.g. `addc n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665` |
-|                           [**List Customer**](#listing-customers--listc) | `listc`                                                                                                                                                         |
+|                           [**List Customer**](#listing-customers--listc) | <code>listc [s/{name&#124;points}] [f/{marked&#124;ind&#124;ent}]</code> <br> e.g. `listc s/points`                                                             |
 |                  [**Find Customer**](#locating-customers-by-name--findc) | `findc KEYWORD [MORE_KEYWORDS]` <br> e.g. `findc Hans Bo`                                                                                                       |
 |                          [**View Customer**](#viewing-a-customer--viewc) | `viewc CINDEX` <br> e.g. `viewc 2`                                                                                                                              |
 |                          [**Edit Customer**](#editing-a-customer--editc) | <code>editc CINDEX [ct/{ind&#124;env}] [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS]</code> <br> e.g. `editc 1 p/91234567 e/johndoe@example.com`                     |
@@ -1248,19 +1248,19 @@ Customer and order data are saved in the hard disk automatically after any comma
 
 ### Order
 
-|                                                              Action | Format, Examples                                                                     |
-|--------------------------------------------------------------------:|--------------------------------------------------------------------------------------|
-|                             [**Add Order**](#adding-an-order--addo) | `addo CINDEX n/NAME [q/QUANTITY] [a/ADDRESS]` <br> e.g. `addo 1 n/Banana Cake 1 q/2` |
-|                        [**List Order**](#listing-all-orders--listo) | `listo`                                                                              |
-|                   [**Find Order**](#locating-orders-by-name--findo) | `findo KEYWORD [MORE_KEYWORDS]` <br> e.g. `findo banana muffin`                      |
-|                          [**View Order**](#viewing-an-order--viewo) | `viewo OINDEX` <br> e.g. `viewo 2`                                                   |
-|                          [**Edit Order**](#editing-an-order--edito) | `edito OINDEX [n/NAME] [q/QUANTITY] [a/ADDRESS]` <br> e.g. `edito 2 n/Brownies q/10` |
-|              [**Advance Order**](#advancing-an-orders-status--advo) | `advo OINDEX`<br> e.g. `advo 1`                                                      |
-|               [**Revert Order**](#reverting-an-orders-status--revo) | `revo OINDEX`<br> e.g. `revo 2`                                                      |
-|                   [**Cancel Order**](#cancelling-an-order--cancelo) | `cancelo OINDEX`<br> e.g. `cancelo 3`                                                |
-|                     [**Delete Order**](#deleting-an-order--deleteo) | `deleteo OINDEX`<br> e.g. `deleteo 3`                                                |
-|         [**Set Note for Order**](#setting-an-orders-note--setnoteo) | `setnoteo OINDEX nt/NOTE` <br> e.g. `setnoteo 2 nt/no eggs and milk`                 |
-| [**Append Note for Order**](#appending-an-orders-note--appendnoteo) | `appendnoteo OINDEX nt/NOTE` <br> e.g. `appendnoteo 2 nt/no eggs and milk`           |
+|                                                              Action | Format, Examples                                                                             |
+|--------------------------------------------------------------------:|----------------------------------------------------------------------------------------------|
+|                             [**Add Order**](#adding-an-order--addo) | `addo CINDEX n/NAME [q/QUANTITY] [a/ADDRESS]` <br> e.g. `addo 1 n/Banana Cake 1 q/2`         |
+|                        [**List Order**](#listing-all-orders--listo) | <code>listo [s/{created&#124;name&#124;status}] [f/STATUS]</code> <br> e.g. `listo s/status` |
+|                   [**Find Order**](#locating-orders-by-name--findo) | `findo KEYWORD [MORE_KEYWORDS]` <br> e.g. `findo banana muffin`                              |
+|                          [**View Order**](#viewing-an-order--viewo) | `viewo OINDEX` <br> e.g. `viewo 2`                                                           |
+|                          [**Edit Order**](#editing-an-order--edito) | `edito OINDEX [n/NAME] [q/QUANTITY] [a/ADDRESS]` <br> e.g. `edito 2 n/Brownies q/10`         |
+|              [**Advance Order**](#advancing-an-orders-status--advo) | `advo OINDEX`<br> e.g. `advo 1`                                                              |
+|               [**Revert Order**](#reverting-an-orders-status--revo) | `revo OINDEX`<br> e.g. `revo 2`                                                              |
+|                   [**Cancel Order**](#cancelling-an-order--cancelo) | `cancelo OINDEX`<br> e.g. `cancelo 3`                                                        |
+|                     [**Delete Order**](#deleting-an-order--deleteo) | `deleteo OINDEX`<br> e.g. `deleteo 3`                                                        |
+|         [**Set Note for Order**](#setting-an-orders-note--setnoteo) | `setnoteo OINDEX nt/NOTE` <br> e.g. `setnoteo 2 nt/no eggs and milk`                         |
+| [**Append Note for Order**](#appending-an-orders-note--appendnoteo) | `appendnoteo OINDEX nt/NOTE` <br> e.g. `appendnoteo 2 nt/no eggs and milk`                   |
 
 ### Miscellaneous
 
