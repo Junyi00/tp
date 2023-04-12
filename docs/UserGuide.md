@@ -37,7 +37,7 @@ Here's a quick guide to what they all mean:
 |        :bulb:        | Useful tips                                             |
 | :information_source: | Notable information you should be aware of              |
 |    :exclamation:     | Important information you should read before proceeding |
-|      :keyboard:      | Examples for a command or feature                       |
+|      :keyboard:      | Examples of a command or feature                        |
 
 [🠕 Back To Top](#table-of-contents)
 
@@ -142,7 +142,7 @@ If you have not done so, use the `clear` command to remove the sample data!
 {: .no_toc}
 
 Adding your first customer is effortless on LoyaltyLift using [`addc`](#adding-a-customer--addc). 
-Enter the following command to insert a new customer _Lyndon Edwards_ along with some basic contact information.
+Enter the following command to insert a new customer _Lyndon Edwards_ and some basic contact information.
 
     addc n/Lyndon Edwards p/93015612 e/lyndon@example.com a/Loyalty Street 103, block 122, #01-20
 
@@ -195,7 +195,7 @@ Hence, you will notice that the order list is now empty, and our application is 
 
 ### Following your order to completion
 
-By following this tutorial, you'll learn how to update your order's status in LoyaltyLift, which will help you to better understand and manage the process of orders in your own business.
+By following this tutorial, you will learn how to update your order’s status in LoyaltyLift, which will help you better understand and manage the process of orders in your business.
 
 #### The order's status
 {: .no_toc}
@@ -214,24 +214,24 @@ LoyaltyLift assumes that your order will follow a process similar to the order o
 </div>
 
 Before we start, head over to [_Add your first customer and order_](#add-your-first-customer-and-order) to include _Lyndon Edwards_ and the _Banana Cake_ order.
-However, do not clear the application data as we will be using the order for this tutorial.
+However, do not clear the application data as we will use the order for this tutorial.
 
 #### Advancing an order's status
 {: .no_toc}
 
-Let's take a look at our current list of orders, which should only consist of the order of _Banana Cake_.
+Let's look at our current list of orders, which should only consist of the order of _Banana Cake_.
 
     listo
 
 Notice that the order's status is now 'Pending'.
-To advance an order's status, the [`advo`](#advancing-an-order-status-advo) command will come in handy, which takes the order index as its only parameter.
+The [`advo`](#advancing-an-order-status-advo) command will come in handy to advance an order's status, which takes the order index as its only parameter.
 
     advo 1
 
 ![result after advancing order status](images/advanceOrderResult.png)
 
 Now, the status of the order should be 'Paid'. Doing this multiple times will eventually update the order's status to 'Completed'.
-Further attempts to advance the order status will return an error!
+Afterwards, further attempts to advance the order status will return an error!
 
 #### Reverting an order's status
 {: .no_toc}
@@ -308,9 +308,9 @@ Enter the following command to add points to _Lyndon Edwards_ to reward him poin
 You should see that _Lyndon Edwards_ has _800 points_.
 
 Now that _Lyndon Edwards_ has some points, let's claim a reward on his behalf for being a loyal customer.
-In this scenario, let's say that it costs _500 points_ for a water bottle. 
-Let's use _500 points_ from _Lyndon Edwards_ to reward him with a water bottle!
-Using the [`addpoints`](#addingsubtracting-points-for-a-customer--addpoints) command, you can then easily track his new points again.
+In this scenario, it costs _500 points_ for a water bottle. 
+Let's deduct _500 points_ from _Lyndon Edwards_ to reward him with a water bottle!
+Using the [`addpoints`](#addingsubtracting-points-for-a-customer--addpoints) command, you can then track his new points again.
 
 Enter the following command to subtract points from _Lyndon Edwards_ after claiming a reward for him.
 
@@ -318,10 +318,10 @@ Enter the following command to subtract points from _Lyndon Edwards_ after claim
 
 ![result after subtracting points](images/subtractingPointsResult.png)
 
-You should see that _Lyndon Edwards_ has _300 points_ remaining. However, do note that he still has 800 cumulative points,
+You should observe that _Lyndon Edwards_ has _300 points_ remaining. However, do note that he still has 800 cumulative points,
 as cumulative points are not subtracted away while claiming rewards.
 
-Lastly, perhaps you feel that this was an error. _Lyndon Edwards_ should have _8000 points_ for being such a loyal customer.
+Lastly, perhaps what you did above was a mistake. _Lyndon Edwards_ should have _8000 points_ for being such a loyal customer.
 You can overwrite his previous points and cumulative points, using the [`setpoints`](#setting-reward-points-for-a-customer--setpoints) command!
 
     setpoints 1 pt/8000
@@ -329,7 +329,7 @@ You can overwrite his previous points and cumulative points, using the [`setpoin
 ![result after setting points](images/setPointsResult.png)
 
 You should see that _Lyndon Edwards_ now has _8000 points_ and _8000 cumulative points_.
-Also, you should observe that he is now part of the **Silver** tier as he has above 5000 cumulative points!
+Also, you should observe that he is now part of the **Silver** tier, as he has above 5000 cumulative points!
 
 <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
 The difference between `setpoints` and `addpoints` is that setting points will also set cumulative points to the same amount. 
@@ -440,7 +440,7 @@ addc n/NAME p/PHONE e/EMAIL a/ADDRESS [ct/{ind|ent}]
 
 #### Listing customers : `listc`
 
-Shows a list of customers in the **List Panel**. You can filter and sort the list by specifying additional details.
+This command shows a list of customers in the **List Panel**. You can filter and sort the list by specifying additional details.
 
 **Format**
 
@@ -472,7 +472,7 @@ listc [s/{name|points}] [f/{marked|ind|ent}]
 
 #### Locating customers by name : `findc`
 
-Helps you find customers whose names contain any of the given keywords.
+This command helps you find customers whose names contain any of the given keywords.
 
 **Format**
 
@@ -732,7 +732,7 @@ setpoints CINDEX pt/POINTS
 | `pt/`   | Points        |          | A positive integer up to 999999 |
 
 <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
-Setting points will also set cumulative points to the same amount, if you wish to keep the current cumulative points, use the `addpoints` command instead.
+Setting points will also set cumulative points to the same amount. If you wish to keep the current cumulative points, use the `addpoints` command instead.
 </div>
 
 <div markdown="block" class="alert alert-secondary">
@@ -769,7 +769,7 @@ the command will not be executed.
 | `pt/`   | Points        |          | *Either* <br /> A positive integer to add points<br/>*Or*<br /> A negative integer to subtract points |
 
 <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
-Addition will also result in an addition of cumulative points, while subtraction will not affect cumulative points.
+`addpoints` will also result in an addition of cumulative points, while subtraction will not affect cumulative points.
 </div>
 
 <div markdown="block" class="alert alert-secondary">
@@ -796,7 +796,7 @@ Addition will also result in an addition of cumulative points, while subtraction
 
 #### Adding an order : `addo`
 
-When your customer sends you an order request, you can include the order and its information with `addo`. 
+When your customer requests an order, you can include the order and its information with `addo`. 
 
 **Format**
 
@@ -826,7 +826,7 @@ addo CINDEX n/NAME [q/QUANTITY] [a/ADDRESS]
 
 #### Listing all orders : `listo`
 
-Shows a list of orders in the **List Panel**. You can filter and sort this list by specifying more details.
+This command shows you a list of orders in the **List Panel**. You can filter and sort this list by specifying more details.
 
 **Format**
 
@@ -864,7 +864,7 @@ Currently, you are unable to add the same order name and quantity for the same c
 
 #### Locating orders by name : `findo`
 
-Helps you find orders whose names contain any of the given keywords.
+`findo` helps you find orders whose names contain any of the given keywords.
 
 **Format**
 
@@ -1203,7 +1203,7 @@ Customer and order data are saved in the hard disk automatically after any comma
 **Q**: Can my orders have a different address than the customer's address? <br />
 **A**: Yes! When you create an order using `addo`, you can specify the new address with the parameter `a/`. If this is not specified, the customer's address is used instead for your convenience.
 
-**Q**: I have cancelled or completed an order by accident, how do I undo this action? <br />
+**Q**: I have cancelled or completed an order by accident. How do I undo this action? <br />
 **A**: With the `revo` command, you can quickly revert the order's last status change you have made with `advo` or `cancelo`!
 
 ### Rewards
