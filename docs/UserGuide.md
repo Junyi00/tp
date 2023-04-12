@@ -500,7 +500,7 @@ findc KEYWORD [MORE_KEYWORDS]
 
 </div>
 
-#### View a customer : `viewc`
+#### Viewing a customer : `viewc`
 
 Displays a customer's information in the **Information Panel**.
 
@@ -893,7 +893,7 @@ findo KEYWORD [MORE_KEYWORDS]
 
 [//]: # (@@author Junyi00)
 
-#### View an order : `viewo`
+#### Viewing an order : `viewo`
 
 Displays an order's information in the **Information Panel**.
 
@@ -953,7 +953,7 @@ edito OINDEX [n/NAME] [q/QUANTITY] [a/ADDRESS]
 
 </div>
 
-#### Advancing an order status: `advo`
+#### Advancing an order's status : `advo`
 
 As you process the order for your customer, you can update the order's status easily with `advo`. 
 
@@ -982,7 +982,7 @@ If the order is completed, the status cannot be advanced further
 
 </div>
 
-#### Reverting an order status: `revo`
+#### Reverting an order's status : `revo`
 
 In the event that an order's progress has to reset backwards, `revo` helps you revert the order to the previous status.
 
@@ -1014,7 +1014,7 @@ revo OINDEX
 
 </div>
 
-#### Cancel an order: `cancelo`
+#### Cancelling an order : `cancelo`
 
 With `cancelo`, you can update an order's status as cancelled whenever an order is invalid or the customer cancels an order.
 
@@ -1225,49 +1225,49 @@ Customer and order data are saved in the hard disk automatically after any comma
 
 ### Customer
 
-|                       Action | Format, Examples                                                                                                                                                |
-|-----------------------------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|             **Add Customer** | <code>addc [ct/{ind&#124;ent}] n/NAME p/PHONE e/EMAIL a/ADDRESS</code> <br> e.g. `addc n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665` |
-|            **List Customer** | `listc`                                                                                                                                                         |
-|            **Find Customer** | `findc KEYWORD [MORE_KEYWORDS]` <br> e.g. `findc Hans Bo`                                                                                                       |
-|            **View Customer** | `viewc CINDEX` <br> e.g. `viewc 2`                                                                                                                              |
-|            **Edit Customer** | <code>editc CINDEX [ct/{ind&#124;env}] [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS]</code> <br> e.g. `editc 1 p/91234567 e/johndoe@example.com`                     |
-|          **Delete Customer** | `deletec CINDEX`<br> e.g. `deletec 3`                                                                                                                           |
-|            **Mark Customer** | `markc CINDEX` <br> e.g. `markc 1`                                                                                                                              |
-|          **Unmark Customer** | `unmarkc CINDEX` <br> e.g. `unmarkc 1`                                                                                                                          |
-|    **Set Note for Customer** | `setnotec CINDEX nt/NOTE` <br> e.g. `setnotec 2 nt/Very friendly!`                                                                                              |
-| **Append Note for Customer** | `appendnotec CINDEX nt/NOTE` <br> e.g. `appendnotec 2 nt/Very friendly!`                                                                                        |
+|                                                                   Action | Format, Examples                                                                                                                                                |
+|-------------------------------------------------------------------------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|                             [**Add Customer**](#adding-a-customer--addc) | <code>addc [ct/{ind&#124;ent}] n/NAME p/PHONE e/EMAIL a/ADDRESS</code> <br> e.g. `addc n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665` |
+|                           [**List Customer**](#listing-customers--listc) | `listc`                                                                                                                                                         |
+|                  [**Find Customer**](#locating-customers-by-name--findc) | `findc KEYWORD [MORE_KEYWORDS]` <br> e.g. `findc Hans Bo`                                                                                                       |
+|                          [**View Customer**](#viewing-a-customer--viewc) | `viewc CINDEX` <br> e.g. `viewc 2`                                                                                                                              |
+|                          [**Edit Customer**](#editing-a-customer--editc) | <code>editc CINDEX [ct/{ind&#124;env}] [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS]</code> <br> e.g. `editc 1 p/91234567 e/johndoe@example.com`                     |
+|                     [**Delete Customer**](#deleting-a-customer--deletec) | `deletec CINDEX`<br> e.g. `deletec 3`                                                                                                                           |
+|                          [**Mark Customer**](#marking-a-customer--markc) | `markc CINDEX` <br> e.g. `markc 1`                                                                                                                              |
+|                    [**Unmark Customer**](#unmarking-a-customer--unmarkc) | `unmarkc CINDEX` <br> e.g. `unmarkc 1`                                                                                                                          |
+|         [**Set Note for Customer**](#setting-a-customers-note--setnotec) | `setnotec CINDEX nt/NOTE` <br> e.g. `setnotec 2 nt/Very friendly!`                                                                                              |
+| [**Append Note for Customer**](#appending-a-customers-note--appendnotec) | `appendnotec CINDEX nt/NOTE` <br> e.g. `appendnotec 2 nt/Very friendly!`                                                                                        |
 
 ### Rewards
 
-|         Action | Format, Examples                                                                  |
-|---------------:|-----------------------------------------------------------------------------------|
-| **Set Points** | `setpoints CINDEX pt/POINTS` <br> e.g. `setpoints 2 pt/100`                       |
-| **Add Points** | `addpoints CINDEX pt/POINTS` <br> e.g. `addpoints 2 pt/100`, `addpoints 1 pt/-50` |
+|                                                                Action | Format, Examples                                                                  |
+|----------------------------------------------------------------------:|-----------------------------------------------------------------------------------|
+|    [**Set Points**](#setting-reward-points-for-a-customer--setpoints) | `setpoints CINDEX pt/POINTS` <br> e.g. `setpoints 2 pt/100`                       |
+| [**Add Points**](#addingsubtracting-points-for-a-customer--addpoints) | `addpoints CINDEX pt/POINTS` <br> e.g. `addpoints 2 pt/100`, `addpoints 1 pt/-50` |
 
 
 ### Order
 
-|                    Action | Format, Examples                                                                     |
-|--------------------------:|--------------------------------------------------------------------------------------|
-|             **Add Order** | `addo CINDEX n/NAME [q/QUANTITY] [a/ADDRESS]` <br> e.g. `addo 1 n/Banana Cake 1 q/2` |
-|            **List Order** | `listo`                                                                              |
-|            **Find Order** | `findo KEYWORD [MORE_KEYWORDS]` <br> e.g. `findo banana muffin`                      |
-|            **View Order** | `viewo OINDEX` <br> e.g. `viewo 2`                                                   |
-|            **Edit Order** | `edito OINDEX [n/NAME] [q/QUANTITY] [a/ADDRESS]` <br> e.g. `edito 2 n/Brownies q/10` |
-|         **Advance Order** | `advo OINDEX`<br> e.g. `advo 1`                                                      |
-|          **Revert Order** | `revo OINDEX`<br> e.g. `revo 2`                                                      |
-|          **Cancel Order** | `cancelo OINDEX`<br> e.g. `cancelo 3`                                                |
-|          **Delete Order** | `deleteo OINDEX`<br> e.g. `deleteo 3`                                                |
-|    **Set Note for Order** | `setnoteo OINDEX nt/NOTE` <br> e.g. `setnoteo 2 nt/no eggs and milk`                 |
-| **Append Note for Order** | `appendnoteo OINDEX nt/NOTE` <br> e.g. `appendnoteo 2 nt/no eggs and milk`           |
+|                                                              Action | Format, Examples                                                                     |
+|--------------------------------------------------------------------:|--------------------------------------------------------------------------------------|
+|                             [**Add Order**](#adding-an-order--addo) | `addo CINDEX n/NAME [q/QUANTITY] [a/ADDRESS]` <br> e.g. `addo 1 n/Banana Cake 1 q/2` |
+|                        [**List Order**](#listing-all-orders--listo) | `listo`                                                                              |
+|                   [**Find Order**](#locating-orders-by-name--findo) | `findo KEYWORD [MORE_KEYWORDS]` <br> e.g. `findo banana muffin`                      |
+|                          [**View Order**](#viewing-an-order--viewo) | `viewo OINDEX` <br> e.g. `viewo 2`                                                   |
+|                          [**Edit Order**](#editing-an-order--edito) | `edito OINDEX [n/NAME] [q/QUANTITY] [a/ADDRESS]` <br> e.g. `edito 2 n/Brownies q/10` |
+|              [**Advance Order**](#advancing-an-orders-status--advo) | `advo OINDEX`<br> e.g. `advo 1`                                                      |
+|               [**Revert Order**](#reverting-an-orders-status--revo) | `revo OINDEX`<br> e.g. `revo 2`                                                      |
+|                   [**Cancel Order**](#cancelling-an-order--cancelo) | `cancelo OINDEX`<br> e.g. `cancelo 3`                                                |
+|                     [**Delete Order**](#deleting-an-order--deleteo) | `deleteo OINDEX`<br> e.g. `deleteo 3`                                                |
+|         [**Set Note for Order**](#setting-an-orders-note--setnoteo) | `setnoteo OINDEX nt/NOTE` <br> e.g. `setnoteo 2 nt/no eggs and milk`                 |
+| [**Append Note for Order**](#appending-an-orders-note--appendnoteo) | `appendnoteo OINDEX nt/NOTE` <br> e.g. `appendnoteo 2 nt/no eggs and milk`           |
 
 ### Miscellaneous
 
-|    Action | Format, Examples |
-|----------:|------------------|
-| **Clear** | `clear`          |
-|  **Exit** | `exit`           |
-|  **Help** | `help`           |
+|                                    Action | Format, Examples |
+|------------------------------------------:|------------------|
+| [**Clear**](#clearing-all-entries--clear) | `clear`          |
+|    [**Exit**](#exiting-the-program--exit) | `exit`           |
+|           [**Help**](#viewing-help--help) | `help`           |
 
 [🠕 Back To Top](#table-of-contents)
