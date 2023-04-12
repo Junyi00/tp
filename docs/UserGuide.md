@@ -26,6 +26,24 @@ Are you excited yet? Let's get started!
 
 <div style="page-break-after: always;"></div>
 
+
+## Using this guide
+
+We want to ensure you can easily navigate our guide, so we've included some icons to help you along the way. 
+
+Here's a quick guide to what they all mean:
+
+|        Icons         | Meaning                                                 |
+|:--------------------:|:--------------------------------------------------------|
+|        :bulb:        | Useful tips                                             |
+| :information_source: | Notable information you should be aware of              |
+|    :exclamation:     | Important information you should read before proceeding |
+|      :keyboard:      | Examples for a command or feature                       |
+
+[🠕 Back To Top](#table-of-contents)
+
+--------------------------------------------------------------------------------------------------------------------
+
 ## Quick start
 
 1. Ensure your computer has Java `11` or above installed.
@@ -259,6 +277,9 @@ In LoyaltyLift, there are three tiers with their associated point threshold.
 |   Gold | 10000           |
 
 <div markdown="block" class="alert alert-info">
+
+**:information_source: Notes about the tier system:**<br>
+
 LoyaltyLift assumes that your tier system will follow a similar style of Bronze, Silver and Gold.
 
 The point threshold above means that if a customer has cumulative points equal to or greater than that threshold, he will be part of that tier.
