@@ -26,7 +26,6 @@ Are you excited yet? Let's get started!
 
 <div style="page-break-after: always;"></div>
 
-
 ## Using this guide
 
 We want to ensure you can easily navigate our guide, so we've included some icons to help you along the way. 
@@ -43,6 +42,8 @@ Here's a quick guide to what they all mean:
 [🠕 Back To Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------------------------
+
+<div style="page-break-after: always;"></div>
 
 ## Quick start
 
