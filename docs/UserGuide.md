@@ -43,8 +43,6 @@ Here's a quick guide to what they all mean:
 
 --------------------------------------------------------------------------------------------------------------------
 
-<div style="page-break-after: always;"></div>
-
 ## Quick start
 
 1. Ensure your computer has Java `11` or above installed.
