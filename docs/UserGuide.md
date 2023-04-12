@@ -478,7 +478,7 @@ findc KEYWORD [MORE_KEYWORDS]
 
 </div>
 
-#### View a customer : `viewc`
+#### Viewing a customer : `viewc`
 
 Displays a customer's information in the **Information Panel**.
 
@@ -871,7 +871,7 @@ findo KEYWORD [MORE_KEYWORDS]
 
 [//]: # (@@author Junyi00)
 
-#### View an order : `viewo`
+#### Viewing an order : `viewo`
 
 Displays an order's information in the **Information Panel**.
 
@@ -931,7 +931,7 @@ edito OINDEX [n/NAME] [q/QUANTITY] [a/ADDRESS]
 
 </div>
 
-#### Advancing an order status: `advo`
+#### Advancing an order's status : `advo`
 
 As you process the order for your customer, you can update the order's status easily with `advo`. 
 
@@ -960,7 +960,7 @@ If the order is completed, the status cannot be advanced further
 
 </div>
 
-#### Reverting an order status: `revo`
+#### Reverting an order's status : `revo`
 
 In the event that an order's progress has to reset backwards, `revo` helps you revert the order to the previous status.
 
@@ -992,7 +992,7 @@ revo OINDEX
 
 </div>
 
-#### Cancel an order: `cancelo`
+#### Cancelling an order : `cancelo`
 
 With `cancelo`, you can update an order's status as cancelled whenever an order is invalid or the customer cancels an order.
 
