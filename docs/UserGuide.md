@@ -129,6 +129,8 @@ Now that you are familiar with the layout of LoyaltyLift, you are ready to jump 
 
 --------------------------------------------------------------------------------------------------------------------
 
+<div style="page-break-after: always;"></div>
+
 ### Add your first customer and order
 
 In this tutorial, you will learn how to add your first customer _Lyndon Edwards_ and his order of 2 of his favourite _Banana Cake_.
@@ -179,6 +181,8 @@ While the [`clear`](#clearing-all-entries--clear) command achieves this quickly,
 
     deletec 1
 
+<div style="page-break-after: always;"></div>
+
 <div markdown="span" class="alert alert-warning">:exclamation: **Caution:**
 In addition to removing `Lyndon Edwards` from the application, all of his orders are also removed!
 </div>
@@ -224,7 +228,7 @@ Let's look at our current list of orders, which should only consist of the order
     listo
 
 Notice that the order's status is now `Pending`.
-The [`advo`](#advancing-an-order-status-advo) command will come in handy to advance an order's status, which takes the order index as its only parameter.
+The [`advo`](#advancing-an-orders-status--advo) command will come in handy to advance an order's status, which takes the order index as its only parameter.
 
     advo 1
 
@@ -236,7 +240,7 @@ Afterwards, further attempts to advance the order status will return an error!
 #### Reverting an order's status
 {: .no_toc}
 
-To revert an order's status, the [`revo`](#reverting-an-order-status-revo) command is similar to [`advo`](#advancing-an-order-status-advo) but has the inverse effect. 
+To revert an order's status, the [`revo`](#reverting-an-orders-status--revo) command is similar to [`advo`](#advancing-an-orders-status--advo) but has the inverse effect. 
 
     revo 1
 
@@ -246,7 +250,7 @@ As expected, trying to revert the status when it is already `Pending`, will be m
 #### Cancelling an order
 {: .no_toc}
 
-An order can be cancelled at any stage of the order. This can be performed with the [`cancelo`](#cancel-an-order-cancelo) command.
+An order can be cancelled at any stage of the order. This can be performed with the [`cancelo`](#cancelling-an-order--cancelo) command.
 
     cancelo 1
 
@@ -262,11 +266,13 @@ If you accidentally cancel an order, you can still revert its status!
 
 --------------------------------------------------------------------------------------------------------------------
 
+<div style="page-break-after: always;"></div>
+
 ### Rewarding your customers
 
 This tutorial will teach you the rewards system in LoyaltyLift and how you can apply it to boost your business's customer loyalty.
 
-#### The Tier System
+#### The tier system
 {: .no_toc}
 
 In LoyaltyLift, there are three tiers with their associated point threshold.
@@ -312,7 +318,7 @@ In this scenario, it costs _500 points_ for a water bottle.
 Let's deduct _500 points_ from _Lyndon Edwards_ to reward him with a water bottle!
 Using the [`addpoints`](#addingsubtracting-points-for-a-customer--addpoints) command, you can then track his new points again.
 
-Enter the following command to subtract points from _Lyndon Edwards_ after claiming a reward for him.
+Enter the following command to subtract points from _Lyndon Edwards_ after claiming a reward.
 
     addpoints 1 pt/-500
 
@@ -341,6 +347,8 @@ You should now be able to reward any of your customers with our point system!
 [🠕 Back To Top](#table-of-contents)
 
 --------------------------------------------------------------------------------------------------------------------
+
+<div style="page-break-after: always;"></div>
 
 ### Extra remarks
 
@@ -438,6 +446,8 @@ addc n/NAME p/PHONE e/EMAIL a/ADDRESS [ct/{ind|ent}]
 
 </div>
 
+<div style="page-break-after: always;"></div>
+
 #### Listing customers : `listc`
 
 This command shows a list of customers in the **List Panel**. You can filter and sort the list by specifying additional details.
@@ -470,6 +480,8 @@ listc [s/{name|points}] [f/{marked|ind|ent}]
 
 </div>
 
+<div style="page-break-after: always;"></div>
+
 #### Locating customers by name : `findc`
 
 This command helps you find customers whose names contain any of the given keywords.
@@ -500,6 +512,8 @@ findc KEYWORD [MORE_KEYWORDS]
 
 </div>
 
+<div style="page-break-after: always;"></div>
+
 #### Viewing a customer : `viewc`
 
 You can view all information about your customer in a single location; this command displays all about them in the **Information Panel**.
@@ -525,6 +539,8 @@ You can click on the customer in the table directly for the same effect!
   ![result for 'viewc 2'](images/viewcBerniceYuResult.png)
 
 </div>
+
+<div style="page-break-after: always;"></div>
 
 #### Editing a customer : `editc`
 
@@ -560,6 +576,8 @@ editc CINDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [ct/{ind|env}]
 
 </div>
 
+<div style="page-break-after: always;"></div>
+
 #### Deleting a customer : `deletec`
 
 If a customer requests that their information be removed from LoyaltyLift, `deletec` helps you remove their profile and orders. 
@@ -586,7 +604,7 @@ deletec CINDEX
 
 [//]: # (@@author JavonTeo)
 
-#### Marking a customer : `markc`
+#### Bookmark a customer : `markc`
 
 You can use this command to prioritise a customer among the customer list. 
 
@@ -606,12 +624,11 @@ markc CINDEX
   Bookmarks the 2nd customer in LoyaltyLift.
   ![result for 'markc 2'](images/markcResult.png)
 
-* `findc Betsy` followed by `markc 1`<br>
-  Bookmarks the 1st customer in the results of the `findc` command.
-
 </div>
 
-#### Unmarking a customer : `unmarkc`
+<br />
+
+#### Un-bookmark a customer : `unmarkc`
 
 `unmarkc` allows you to remove a bookmark of a customer.
 
@@ -631,16 +648,15 @@ unmarkc CINDEX
   Un-bookmarks the 2nd customer in LoyaltyLift.
   ![result for 'unmarkc 2'](images/unmarkcResult.png)
 
-* `findc Betsy` followed by `unmarkc 1`<br>
-  Un-bookmarks the 1st customer in the results of the `findc` command.
-
 </div>
+
+<div style="page-break-after: always;"></div>
 
 [//]: # (@@author CloudHill)
 
 #### Setting a customer's note : `setnotec`
 
-By creating a note, you can keep track of essential details of your customers, such as their preferences or previous feedbacks.
+By creating a note, you can keep track of essential details of your customers, such as their preferences or previous feedback.
 
 **Format**
 
@@ -656,25 +672,23 @@ setnotec CINDEX nt/NOTE
 | `nt/`   | Note          |          | Any value   |
 
 <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
-This command overwrites existing notes.
-You can remove a customer's note by setting an empty note.
+You can remove a customer's note by specifying no value after the prefix!
 </div>
 
 <div markdown="block" class="alert alert-secondary">
 
 **:keyboard: Examples:**<br>
 
-* `listc` followed by `setnotec 2 nt/Very friendly!`<br>
-  Sets the 2nd customer's note as `Very friendly!`.
-
-* `listc` followed by `setnotec 2 nt/`<br>
-  Removes the 2nd customer's note.
-
 * `findc Betsy` followed by `setnotec 1 nt/Vegetarian`<br>
   Sets the 1st customer's note as `Vegetarian` in the results of the `findc` command.
   ![result for 'setnotec 1 nt/Vegetarian'](images/setnotecBetsyResult.png)
 
+* `listc` followed by `setnotec 2 nt/`<br>
+  Removes the 2nd customer's note.
+
 </div>
+
+<div style="page-break-after: always;"></div>
 
 #### Appending a customer's note : `appendnotec`
 
@@ -748,6 +762,8 @@ Setting points will also set cumulative points to the same amount. If you wish t
 
 </div>
 
+<div style="page-break-after: always;"></div>
+
 #### Adding/Subtracting points for a customer : `addpoints`
 
 With `addpoints`, you can add or subtract points from your customers as they place orders. 
@@ -817,12 +833,14 @@ addo CINDEX n/NAME [q/QUANTITY] [a/ADDRESS]
 **:keyboard: Examples:**<br>
 
 * `addo 1 n/Banana Cake 1 q/2 a/Changi Airport`<br>
-  Adds the order, 2 x Banana cakes to the list, tags it to customer at index 1, and status is `pending`, address is `Changi Airport`.
+  Adds the order, 2 x Banana cakes to the list, tags it to customer at index 1, and status is `Pending`, address is `Changi Airport`.
 
 * `addo 4 n/Strawberry ice cream`<br>
-  Adds the order 1 x Strawberry ice cream, tags it to customer 4, and sets status to `pending`, address is the customer's address.
+  Adds the order 1 x Strawberry ice cream, tags it to customer 4, and sets status to `Pending`, address is the customer's address.
 
 </div>
+
+<div style="page-break-after: always;"></div>
 
 #### Listing all orders : `listo`
 
@@ -836,10 +854,10 @@ listo [s/{created|name|status}] [f/STATUS]
 
 * List orders with the specified sort and filter option.
 
-| Prefix  | Parameter | Optional | Description                                                                                                                             |
-|---------|-----------|:--------:|-----------------------------------------------------------------------------------------------------------------------------------------|
-| `s/`    | Sort      | ✅       | `created` - Sort by created date<br>`name` - Sort by name<br>`status` - Sort by status<br>By default, orders are sorted by created date |
-| `f/`    | Filter    | ✅       | Show only orders with the specified status<br>By default, all orders are shown                                                          |
+| Prefix | Parameter | Optional | Description                                                                                                                             |
+|--------|-----------|:--------:|-----------------------------------------------------------------------------------------------------------------------------------------|
+| `s/`   | Sort      |    ✅     | `created` - Sort by created date<br>`name` - Sort by name<br>`status` - Sort by status<br>By default, orders are sorted by created date |
+| `f/`   | Filter    |    ✅     | Show only orders with the specified status<br>By default, all orders are shown                                                          |
 
 <div markdown="span" class="alert alert-warning">:exclamation: **Caution:**
 Currently, you are unable to add the same order name and quantity for the same customer twice on the same day!
@@ -861,6 +879,8 @@ Currently, you are unable to add the same order name and quantity for the same c
 </div>
 
 [//]: # (@@author CloudHill)
+
+<div style="page-break-after: always;"></div>
 
 #### Locating orders by name : `findo`
 
@@ -891,6 +911,8 @@ findo KEYWORD [MORE_KEYWORDS]
 
 </div>
 
+<div style="page-break-after: always;"></div>
+
 [//]: # (@@author Junyi00)
 
 #### Viewing an order : `viewo`
@@ -918,6 +940,8 @@ You can click on the order in the table directly for the same effect!
   ![result for 'viewo 2'](images/viewoBananaCakeResult.png)
 
 </div>
+
+<div style="page-break-after: always;"></div>
 
 [//]: # (@@author jednghk)
 
@@ -951,6 +975,8 @@ edito OINDEX [n/NAME] [q/QUANTITY] [a/ADDRESS]
 * `edito 2 n/Brownies q/10`<br>
   Edits the name and quantity of the 2nd order to be `Brownies` and `10` respectively.
 
+<div style="page-break-after: always;"></div>
+
 </div>
 
 #### Advancing an order's status : `advo`
@@ -981,6 +1007,8 @@ If the order is completed, the status cannot be advanced further
   ![result for 'advo 1'](images/advoBananaCakeResult.png)
 
 </div>
+
+<div style="page-break-after: always;"></div>
 
 #### Reverting an order's status : `revo`
 
@@ -1014,6 +1042,8 @@ revo OINDEX
 
 </div>
 
+<div style="page-break-after: always;"></div>
+
 #### Cancelling an order : `cancelo`
 
 With `cancelo`, you can update an order's status as cancelled whenever an order is invalid or the customer cancels an order.
@@ -1034,6 +1064,8 @@ cancelo OINDEX
   Changes the status of the 1st order to `Cancelled`.
 
 </div>
+
+<br />
 
 #### Deleting an order : `deleteo`
 
@@ -1061,6 +1093,8 @@ deleteo OINDEX
 
 [//]: # (@@author CloudHill)
 
+<div style="page-break-after: always;"></div>
+
 #### Setting an order's note : `setnoteo`
 
 By creating notes for your orders, you can save crucial details of orders, such as customer requests or preferred delivery timings. 
@@ -1079,7 +1113,7 @@ setnoteo OINDEX nt/NOTE
 | `nt/`   | Note          |          | Any value   |
 
 <div markdown="span" class="alert alert-primary">:bulb: **Tip:**
-You can remove an order's note by setting an empty note.
+Similarly to `setnotec`, You can remove an order's note by specifying no value after the prefix!
 </div>
 
 <div markdown="block" class="alert alert-secondary">
@@ -1096,6 +1130,8 @@ You can remove an order's note by setting an empty note.
   Sets the 1st order's note as `Vegan-friendly` in the results of the `findo` command.
 
 </div>
+
+<div style="page-break-after: always;"></div>
 
 #### Appending an order's note : `appendnoteo`
 
@@ -1233,8 +1269,8 @@ Customer and order data are saved in the hard disk automatically after any comma
 |                          [**View Customer**](#viewing-a-customer--viewc) | `viewc CINDEX` <br> e.g. `viewc 2`                                                                                                                              |
 |                          [**Edit Customer**](#editing-a-customer--editc) | <code>editc CINDEX [ct/{ind&#124;env}] [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS]</code> <br> e.g. `editc 1 p/91234567 e/johndoe@example.com`                     |
 |                     [**Delete Customer**](#deleting-a-customer--deletec) | `deletec CINDEX`<br> e.g. `deletec 3`                                                                                                                           |
-|                          [**Mark Customer**](#marking-a-customer--markc) | `markc CINDEX` <br> e.g. `markc 1`                                                                                                                              |
-|                    [**Unmark Customer**](#unmarking-a-customer--unmarkc) | `unmarkc CINDEX` <br> e.g. `unmarkc 1`                                                                                                                          |
+|                     [**Bookmark Customer**](#bookmark-a-customer--markc) | `markc CINDEX` <br> e.g. `markc 1`                                                                                                                              |
+|             [**Un-bookmark Customer**](#un-bookmark-a-customer--unmarkc) | `unmarkc CINDEX` <br> e.g. `unmarkc 1`                                                                                                                          |
 |         [**Set Note for Customer**](#setting-a-customers-note--setnotec) | `setnotec CINDEX nt/NOTE` <br> e.g. `setnotec 2 nt/Very friendly!`                                                                                              |
 | [**Append Note for Customer**](#appending-a-customers-note--appendnotec) | `appendnotec CINDEX nt/NOTE` <br> e.g. `appendnotec 2 nt/Very friendly!`                                                                                        |
 
